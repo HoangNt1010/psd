@@ -2,42 +2,58 @@
     padding: 0;
     margin: 0;
 }
+html {
+    scroll-behavior: smooth;
+}
+
+@font-face {
+    font-family: youthBeauty;
+    src: url(./font/youth-and-beauty/Youth\ and\ Beauty\ -\ TTF.ttf);
+}
+
+@font-face {
+    font-family: typeface;
+    src: url(./font/Amastery/Amastery\ Extras.ttf);
+}
+
+@font-face {
+    font-family: december;
+    src: url(./font/fortunates-december/FortunatesDecember.ttf);
+}
+
+
 
 .header {
-    width: 100%;
-    background: url(./background/6.jpg); opacity: 0.8;
-}
-.header .logo {
-    font-size: 30px;
+    background: url(https://exp.gg/vn/wp-content/uploads/2018/08/DOTA-2-th%E1%BB%91ng-tr%E1%BB%8B-BXH-nh%E1%BB%AFng-game-th%E1%BB%A7-c%C3%B3-thu-nh%E1%BA%ADp-cao-nh%E1%BA%A5t-1.jpg) no-repeat;
+    display: flex;
+    flex-flow: column;
+    background-size: cover;;
 }
 
-.menu {
-    /* position: fixed; */
-    background: rgba(0, 0, 0, 0.5);
+.header .menu {
     min-height: 150px;
-    /* width: 100%; */
+    background: rgba(0, 0, 0, 0.5);
 }
-
-.menu i {
-    font-size: 20px;
-}
-
-.header .header-content>div {
+.header .menu .logo {
     font-size: 30px;
+    color : #c8522e;
+    font-family: december;
 }
 
 .header .header-content {
+    min-height: 650px;
+    background: rgba(0, 0, 0, 0.2);
     display: flex;
+    flex-flow: column wrap;
     justify-content: center;
     align-items: center;
-    background: rgba(0, 0, 0, 0.4);
-    min-height: 650px;
-    
 }
+
 .header .header-content>div {
-    background: rgba(0, 0, 0, 0.2);
+    background: rgba(0, 0, 0, 0.4);
     color : white;
-    display: block;
+    margin: 10px;
+    border-radius: 5px;
     
 }
 
@@ -46,16 +62,21 @@
     min-height: 400px;
 }
 
+.services p {
+    text-align: justify;
+}
 
-.portfolio {
+
+.hero {
     min-height: 850px;
 }
 
-.portfolio .img-animation {
+.hero .img-animation {
     padding : 0 30px;
+    margin-bottom: 20px;
 }
 
-.portfolio .img-animation>div{
+.hero .img-animation>div{
     height: 230px;
     width: 230px;
     overflow: hidden;
@@ -63,31 +84,36 @@
     
 }
 
-.portfolio img {
+.hero img {
     max-width: 110%;
     transition: transform 1s;
 
 
 }
 
-.portfolio img:hover {
-    transform: scale(1.5);
-
+.hero img:hover {
+    transform: scale(1.7) rotate(35deg);
 
 }
 
-.section {
+.introduction {
     min-height: 470px;
     background: #515f67;
 }
 
-.section .section-content {
+.introduction .introduction-content {
     display: flex;
     flex-wrap: wrap;
     align-content: space-between;    
 }
 
-.section iframe {
+.introduction p {
+    text-align: justify;
+    font-family: youthBeauty;
+    font-size: 20px;
+}
+
+.introduction iframe {
     height: 100%;
     width: 100%;
 }
@@ -106,9 +132,13 @@ i {
 
 .about {
     min-height: 510px;
-    background: url(https://steamuserimages-a.akamaihd.net/ugc/309990632668600019/5884C088980EC2A6E8691163B29E1C4254E06AB3/);
+    background: url(https://dota2hq.eu/wallpaper/dota2hq.eu-luna-and-mirana-the-hunt-3488-2560x1440.jpg);
     background-size: cover;
 
+}
+
+.about p {
+    text-align: justify;
 }
 
 .about i {
@@ -123,6 +153,9 @@ i {
 
 .content p {
     font-size: 22px;
+    font-family: typeface;
+    font-size: 20;
+    text-align: justify;
 }
 
 .content span {
@@ -130,13 +163,18 @@ i {
 }
 
 .contact {
-    background: url(https://gameworld.vn/wp-content/uploads/2019/03/Arcana-vote-invoker-1068x580.jpg);
+    background: url(https://dotesports-media.nyc3.cdn.digitaloceanspaces.com/wp-content/uploads/2019/08/13130408/26a972ca-3230-406d-9aa9-d31ab9b58e4b-channel_offline_image-1920x1080.jpeg);
     background-size: cover;
     min-height: 820px;
 }
 
 .contact p {
     margin: 0;
+}
+
+.contact .text-contact {
+    font-size: 25px;
+
 }
 
 .contact input {
@@ -171,6 +209,39 @@ i {
     font-size: 30px;
 }
 
-.bor {
-    border: 1px solid black;
-}
+#myBtn {
+    display: none; /* Hidden by default */
+    position: fixed; /* Fixed/sticky position */
+    bottom: 40px; /* Place the button at the bottom of the page */
+    right: 30px; /* Place the button 30px from the right */
+    z-index: 99; /* Make sure it does not overlap */
+    border: none; /* Remove borders */
+    outline: none; /* Remove outline */
+    background-color: none; /* Set a background color */
+    color: black; /* Text color */
+    cursor: pointer; /* Add a mouse pointer on hover */
+    padding: 15px; /* Some padding */
+    border-radius: 10px; /* Rounded corners */
+    font-size: 15px; /* Increase font size */
+    opacity: 0.5;
+  }
+  
+  #myBtn:hover {
+    background-color: #555; /* Add a dark-grey background on hover */
+  }
+
+  @media screen and (max-width: 768px) {
+    .header .header-content {
+        text-align:  center;
+    }
+
+    .hero .img-animation>div {
+        margin : 10px auto;
+        width: 350px;
+        height: 350px;
+    }
+
+    .content p {
+        text-align: justify;
+    }
+  }
